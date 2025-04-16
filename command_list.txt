@@ -1,0 +1,32 @@
+mkdir FR_3Lab7
+cd FR_3Lab7/
+echo "Something" > file1.txt
+git add file1.txt
+git init
+git add file1.txt
+git commit -m "added file1.txt"
+echo "Something new" > file1.txt
+git add file1.txt
+git commit -m "changed file1.txt"
+git remote add origin https://github.com/SevaZimov/FR_3_L7.git
+git push -u origin master
+git checkout -b feature
+echo "Something for branch" > file2.txt
+git add file2.txt
+git commit -m "added file2.txt"
+echo "Other something for branch" > file3.txt
+git add file3.txt
+git commit -m "added file3.txt"
+git push --force origin feature
+git reset --hard HEAD~1
+
+Команды для просмотра состояния репозитория
+git status
+git branch -a
+git remote -v
+
+История коммитов
+git log --oneline --graph --all
+
+
+
